@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Attaching Main CSS File -->
+    <link rel="stylesheet" href="../main.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    /* styles.css */
+
+    /* Hide elements with class 'active' */
+    .active {
+        display: block !important;
+    }
+
+    #popup {
+        display: none;
+        /* Your existing styles for the popup */
+    }
+
+    /* Styling for blur effect */
+    #blur.active {
+        filter: blur(5px);
+    }
+
+    #popup.active {
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        transform: 0.5s;
+        width: 82%;
+        height: 44%;
+    }
+
+    .ADD {
+        width: 87%;
+        display: flex;
+        padding-top: 25px;
+        padding-bottom: 30px;
+        justify-content: space
+    }
+</style>
+
+<body style="overflow: scroll;">
+    <nav>
+        <div class="container-nav">
+            <ul>
+                <li><img src="../assests/MSP-Black-Logo.webp" width="209" alt="MSP Logo">
+                    <i class="fa-solid fa-bars"></i>
+                </li>
+                <li class="item "><a href="../Team/index.html">Team</a></li>
+                <li class="item "><a href="../Gallery/index.html">Gallery</a></li>
+                <li class="item"><a href="../Blog/index.html">Blog</a></li>
+                <li class="item"><a href="../History/index.html">History of Team</a></li>
+                <li class="item active"><a href="../Sponsor/index.html">Our main Sponsors</a></li>
+                <li class="arabic-lang-btn">اللغة العربية</li>
+                <li><i class="fa-solid fa-xmark"></i></li>
+            </ul>
+        </div>
+    </nav>
+    <main id="sponsors">
+        <div class="Page" id="homepage">
+            <div class="container" id="blur">
+                <div class="team">
+                    <h2>Our Sponsors</h2>
+                </div>
+                <div class="cards" id="sponsorCards">
+                    <!-- Card "Add New" -->
+                    <div class="card-add" id="searchButton">
+                        <i id="magnifying-glass" class="fa-solid fa-plus" style="color: #080808;"></i>
+                        <h5>Add New Sponsor</h5>
+                    </div>
+                </div>
+                <div class="content3">
+                    <div class="row1" id="previousteam">
+                        <i class="fa-solid fa-angles-left" style="color: #7b1d80;"></i>
+                    </div>
+                    <div class="row2" id="nextteam">
+                        <i class="fa-solid fa-angles-right" style="color: #7b1d80;"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Form HTML -->
+            <div class="inputs" id="popup" style="display: none;">
+                <div class="container">
+                    <div class="ADD">
+                        <h2>Add</h2>
+                        <button class="exit" id="closePopup">X</button>
+                    </div>
+                    <form id="addSponsorForm">
+                        <div class="together">
+                            <div class="custom">
+                                <div class="label" for="image-upload">
+                                    <i class="fa-solid fa-link" style="color: #0a0a0a;"></i>
+                                    <span id="txtFile">Upload Image *</span>
+                                </div>
+                                <input type="file" name="image" id="image-upload" required>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button type="button" id="cancel">Cancel</button>
+                            <button type="submit" id="add">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/9e1cfffd14.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
